@@ -15,6 +15,10 @@
 		2771581A1DC4A8DC009EB1AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 277158181DC4A8DC009EB1AB /* LaunchScreen.storyboard */; };
 		277158251DC4A8DC009EB1AB /* JsWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 277158241DC4A8DC009EB1AB /* JsWebViewTests.m */; };
 		277158301DC4A8DC009EB1AB /* JsWebViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2771582F1DC4A8DC009EB1AB /* JsWebViewUITests.m */; };
+		277158441DC4A986009EB1AB /* JsBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2771583F1DC4A986009EB1AB /* JsBridge.m */; };
+		277158451DC4A986009EB1AB /* JsFromOCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 277158411DC4A986009EB1AB /* JsFromOCClass.m */; };
+		277158461DC4A986009EB1AB /* JSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 277158431DC4A986009EB1AB /* JSWebView.m */; };
+		2771584A1DC4B191009EB1AB /* global.m in Sources */ = {isa = PBXBuildFile; fileRef = 277158491DC4B191009EB1AB /* global.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		2771582B1DC4A8DC009EB1AB /* JsWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2771582F1DC4A8DC009EB1AB /* JsWebViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsWebViewUITests.m; sourceTree = "<group>"; };
 		277158311DC4A8DC009EB1AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2771583E1DC4A986009EB1AB /* JsBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsBridge.h; sourceTree = "<group>"; };
+		2771583F1DC4A986009EB1AB /* JsBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsBridge.m; sourceTree = "<group>"; };
+		277158401DC4A986009EB1AB /* JsFromOCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsFromOCClass.h; sourceTree = "<group>"; };
+		277158411DC4A986009EB1AB /* JsFromOCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsFromOCClass.m; sourceTree = "<group>"; };
+		277158421DC4A986009EB1AB /* JSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWebView.h; sourceTree = "<group>"; };
+		277158431DC4A986009EB1AB /* JSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWebView.m; sourceTree = "<group>"; };
+		277158481DC4B191009EB1AB /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = global.h; sourceTree = "<group>"; };
+		277158491DC4B191009EB1AB /* global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = global.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,8 @@
 		277158091DC4A8DC009EB1AB /* JsWebView */ = {
 			isa = PBXGroup;
 			children = (
+				277158471DC4B125009EB1AB /* Interface */,
+				2771583D1DC4A986009EB1AB /* JsWebView */,
 				2771580D1DC4A8DC009EB1AB /* AppDelegate.h */,
 				2771580E1DC4A8DC009EB1AB /* AppDelegate.m */,
 				277158101DC4A8DC009EB1AB /* ViewController.h */,
@@ -138,6 +152,28 @@
 				277158311DC4A8DC009EB1AB /* Info.plist */,
 			);
 			path = JsWebViewUITests;
+			sourceTree = "<group>";
+		};
+		2771583D1DC4A986009EB1AB /* JsWebView */ = {
+			isa = PBXGroup;
+			children = (
+				2771583E1DC4A986009EB1AB /* JsBridge.h */,
+				2771583F1DC4A986009EB1AB /* JsBridge.m */,
+				277158401DC4A986009EB1AB /* JsFromOCClass.h */,
+				277158411DC4A986009EB1AB /* JsFromOCClass.m */,
+				277158421DC4A986009EB1AB /* JSWebView.h */,
+				277158431DC4A986009EB1AB /* JSWebView.m */,
+			);
+			path = JsWebView;
+			sourceTree = "<group>";
+		};
+		277158471DC4B125009EB1AB /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				277158481DC4B191009EB1AB /* global.h */,
+				277158491DC4B191009EB1AB /* global.m */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277158451DC4A986009EB1AB /* JsFromOCClass.m in Sources */,
 				277158121DC4A8DC009EB1AB /* ViewController.m in Sources */,
+				277158461DC4A986009EB1AB /* JSWebView.m in Sources */,
 				2771580F1DC4A8DC009EB1AB /* AppDelegate.m in Sources */,
 				2771580C1DC4A8DC009EB1AB /* main.m in Sources */,
+				277158441DC4A986009EB1AB /* JsBridge.m in Sources */,
+				2771584A1DC4B191009EB1AB /* global.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
